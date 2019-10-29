@@ -23,4 +23,7 @@ public interface AccountMapper {
 
     @Select("select id,name as name,money as money from account")
     List<Account> findAccountList();
+
+    @Update("update account set money=#{money} where id=#{id}")
+    void update1(@Param("money")double money,@Param("id")int id);
 }

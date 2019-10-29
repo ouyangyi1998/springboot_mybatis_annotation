@@ -59,5 +59,10 @@ public class AccountController {
             return "fail";
         }
     }
+    @RequestMapping(value = "transfer",method = RequestMethod.GET)
+    public void  transfer()
+    {
+        accountService.transfer();
+    }
 
 }
